@@ -1,0 +1,601 @@
+:root {
+    --color-primario: #cad9e1;    
+    --color-secundario: #122c3c;  
+    --color-terciario: #35c1a4;
+    --color-texto: #333;
+
+    --tamano-titulo: 24px;
+    --tamano-subtitulo: 18px;
+    --tamano-texto: 16px;  
+
+    --grosor-titulo: bold;
+    --grosor-subtitulo: 600;
+    --grosor-menu: 400;
+    --grosor-texto: lighter;
+  }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+/* header styles */
+
+.header_container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color-primario);
+}
+
+.logo_container {
+    background-color: var(--color-secundario);
+    padding: .5rem;
+    border-radius: 10px;
+    color: white;
+}
+
+.menu_section_login{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .2rem;
+}
+
+.menu_listItems{
+    display: flex;
+    gap: 2rem;
+    list-style: none; 
+}
+
+.menu_listItems > li{
+    padding: 2px;
+    color: var(--color-texto);
+    border-radius: .3rem;
+    font-size: var(--tamano-subtitulo);
+    font-weight: var(--grosor-menu);
+    cursor: pointer;
+}
+
+.menu_listItems > li:hover{
+    color: #35c1a4;
+}
+
+.menu_listItems > li.active{
+    color: #35c1a4;
+    font-weight: bold;
+}
+
+/* main styles */
+
+.main_container{
+    width: 100%;
+    height: 90vh;
+}
+
+.main_section_heroimage{
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("./assets/fondo-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.main_section_card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #00000090;
+    width: 50%;
+    height: 50%;
+    padding: 1rem;
+    color: white;
+}
+
+.main_section_card > button{
+    width: 50%;
+    background-color: var(--color-terciario);
+    color: white;
+    font-size: medium;
+    border: none;
+    padding: .5rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.main_section_card > button:hover{
+    background-color: #2ea18a;
+}
+
+.main_section_card > p{
+    font-size: var(--tamano-texto);
+    font-weight: var(--grosor-texto);
+}
+
+.main_section_card > h2{
+    font-size: var(--tamano-titulo);
+    font-weight: var(--grosor-titulo);
+}
+
+/* section videogames styles */
+
+.section_videogames_container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primario);
+}
+
+.section_videogames_slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: .5rem;
+}
+
+.slider  .slick-track {
+    border: 1px solid;
+    width: 100%;
+    height: 100%
+}
+
+
+.slider .slick-slide > div {
+    margin: 5px;
+    height: 33.33%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("./assets/fondo_exitos.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section_videogames_slider > div{
+    display: flex;
+    height: 90%;
+    width: 60%;
+    color: white;
+}
+
+.section_videogame_ranking {
+    width: 100%;
+    text-align: end;
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.section_videogame_details{
+    height: auto;
+    background-color: #2ea167ab;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.section_videogame_details > p{
+    font-size: var(--tamano-subtitulo);
+}
+
+.section_videogames_slider > h2 {
+    width: 100%;
+    background-color: #35c1a4;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+.image{
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.section_videogames_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: .5rem;
+}
+
+.section_videogames_filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+.section_videogames_filter > input{
+    background-color: #ffffff95;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
+.section_videogames_filter > input:focus{
+    border: none;
+    box-shadow: 0 0 5px rgba(9, 175, 167, 0.5);
+}
+
+
+
+.section_videogames_listitems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.section_videogame_card_details > p{
+  font-size: .7rem;
+  font-weight: var(--grosor-texto);
+}
+
+.section_videogames_list > h2{
+    width: 100%;
+    background-color: #35c1a4;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+/* Modal styles*/
+.section_Modal{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+.section_Modal_Details{
+    display: flex;
+    flex-direction: column;
+}
+
+.section_Modal_Details > p{
+    font-weight: var(--grosor-texto);
+}
+
+.section_Modal > button{
+    background-color: red;
+    padding: .5rem;
+    border: none;
+    color: white;
+    font-size: var(--tamano-subtitulo);
+    font-weight: var(--grosor-subtitulo);
+    border-radius: 5px;
+}
+
+.section_Modal > button:hover{
+   background-color: rgba(255, 0, 0, 0.623);
+}
+
+.section_videogames_card_items{
+    display: flex;
+    gap: 1rem;
+}
+
+.section_videogames_card_image > img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+}
+
+.section_videogame_card_info{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.section_videogame_card_info > h3{
+    font-size: var(--tamano-subtitulo);
+    font-weight: var(--grosor-subtitulo);
+}
+
+.section_videogame_card_info > p{
+    font-size: var(--tamano-texto);
+    font-weight: var(--grosor-texto);
+}
+
+
+.section_videogaem_card_buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.section_videogaem_card_buttons > button{
+    background-color: #35c1a4;
+    border: none;
+    padding: .3rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.section_videogaem_card_buttons > button:hover{
+    background-color: #2ea18a;
+    
+}
+
+/* section information styles */
+
+.section_information_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.section_information_text{
+    background-color: var(--color-secundario) ;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    color: white;
+}
+
+.section_information_text > button{
+    width: 50%;
+    background-color: var(--color-terciario);
+    color: white;
+    font-size: medium;
+    border: none;
+    padding: .5rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.section_information_image{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("./assets/fondo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+/* section prices styles */
+
+.section_prices_container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primario);
+}
+
+.section_prices_container > *{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.section_prices_container > * > button {
+    width: 90%;
+    background-color: #2ea18a;
+    padding: .5rem;
+    border: none;
+    border-radius: .3rem;
+    color: white;
+    font-size: medium;
+}
+
+.section_prices_container > * > p {
+    font-size: 20px;
+}
+.section_prices_container > *:nth-child(1), 
+.section_prices_container > *:nth-child(3){
+    background-color: var(--color-secundario);
+    color: white;
+}
+
+.section_prices_container > *:nth-child(2){
+    height: 75%;
+    background-color: var(--color-terciario);
+    color: white;
+    box-shadow: 0 0 5px rgba(4, 151, 90, 0.979);
+}
+.section_prices_card_listItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section_prices_card_listItems > li{
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    list-style: none; 
+    background: url('./assets/circle-check-solid.svg') no-repeat left center; 
+    background-size: 20px 20px;
+    padding-left: 25px;
+    font-weight: 100;
+}
+
+/* footer styles */
+
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    height: 15vh;
+    background-color: var(--color-secundario);
+}
+
+.section_footer_redes{
+    display: flex;
+    gap: 1rem;
+}
+
+.section_footer_redes > img{
+    width: 30px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.footer_listItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.footer_listItems > li.active{
+    color: #35c1a4;
+    font-weight: bold;
+}
+
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .header_container{
+        display: flex;
+    }
+
+    .menu_listItems {
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #33333310;
+        z-index: 1;
+        gap: 0;
+    }
+
+    .menu_section_login > p{
+        display: none;
+    }
+
+    .menu_listItems > li {
+        color: white;
+    }
+
+    .menu_listItems.show {
+        display: flex;
+    }
+    
+    .menu-icon {
+        display: block;
+    }
+
+    .main_section_heroimage{
+        max-width: 100%;
+        max-height: 100%;
+        justify-content: center;
+    }
+
+    .main_section_card{
+        height: auto;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .main_section_card > button {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .section_videogames_container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section_videogames_container> *{
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .section_videogames_slider > div{
+        width: 90%;
+    }
+
+    .section_information_image{
+        display: none;
+    }
+
+    .section_information_text{
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("./assets/fondo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section_prices_container{
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .section_prices_container > *{
+        width: 100%;
+        
+    }
+
+    .section_prices_card_listItems{
+        text-align: center;
+    }
+
+    .footer_container{
+        height: auto;
+    }
+    .section_footer_redes{
+        margin-top: 10px;
+    }
+
+    .footer_listItems{
+        flex-direction: column;
+        gap: 0;
+        padding: 10px;
+    }
+
+}
