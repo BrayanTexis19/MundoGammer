@@ -11,7 +11,7 @@ import { useFetch } from "./hooks/useFetch";
 const App = () => {
   const [activeItem, setActiveItem] = useState(0);
   const [filterText, setFilterText] = useState("");
-  let url = "http://localhost:5000/api/videogames";
+  let url = "https://mg-api.vercel.app/api/videogames";
 
   let { data } = useFetch(url);
 
