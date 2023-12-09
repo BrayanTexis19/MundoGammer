@@ -28,7 +28,7 @@ const SectionVideogames = ({
         <section className="section_videogames_slider">
           <h2>Lista de exitos</h2>
           <Slider {...settings} className="slider">
-            {data && filteredData.map((element, index) => (
+            {data && data.map((element, index) => (
               <CardCarrousel key={index} index={index} element={element} />
             ))}
           </Slider>
