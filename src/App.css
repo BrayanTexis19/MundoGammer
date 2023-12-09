@@ -362,6 +362,10 @@ a {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.section_information_text > button:hover{
+    background-color: #2ea18a;
+}
+
 .section_information_image{
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("./assets/fondo.png");
     background-position: center;
@@ -404,6 +408,12 @@ a {
     color: white;
     font-size: medium;
 }
+
+.section_prices_container > * > button:hover {
+    background-color: #2ea18ace;
+}
+
+
 
 .section_prices_container > * > p {
     font-size: 20px;
@@ -468,6 +478,9 @@ a {
     gap: 2rem;
     list-style: none;
     cursor: pointer;
+}
+.footer_listItems > li:hover{
+    color: #35c1a4;
 }
 
 .footer_listItems > li.active{
